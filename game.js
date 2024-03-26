@@ -1,0 +1,1 @@
+const rock = document.getElementById("rock")
