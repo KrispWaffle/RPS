@@ -8,6 +8,9 @@ body{
 
 .icon-cont{
    
- 
+    
     text-align: center;
+}
+.icon-cont img{
+    margin: 30px;
 }
