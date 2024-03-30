@@ -9,6 +9,7 @@ function compChoice(choice){
     const compChoose = Math.floor(Math.random()*choices.length)
     
     const result = choice[compChoose]
+    console.log(result)
    
     return result;
 
@@ -25,22 +26,22 @@ function enableImages() {
     paper.addEventListener("click", paperClickHandler);
     scissors.addEventListener("click", scissorsClickHandler);
 }
-const comp = compChoice(choices)
+let comp = compChoice(choices)
 console.log(comp)
 
 
 function play(){
     disableImages();
-
+    
     if(userChoice == "rock" && comp == "scissors" || userChoice == "paper" && comp == "rock" || userChoice == "scissors" && comp =="paper"){
              document.getElementById("winoL").textContent = "You Won"
-             document.getElementById("playagain").style.display = "block";
+             document.getElementById("playagain").style.display = "flex";
         }else if (userChoice == comp) {
              document.getElementById("winoL").textContent = "tied"
-             document.getElementById("playagain").style.display = "block";
+             document.getElementById("playagain").style.display = "flex";
             } else {
                 document.getElementById("winoL").textContent = "You Lost";
-                document.getElementById("playagain").style.display = "block";
+                document.getElementById("playagain").style.display = "flex";
            
             }
             
@@ -50,8 +51,9 @@ playagainB.addEventListener("click", function(){
     console.log("worked")
     document.getElementById("winoL").textContent = " ";
     document.getElementById("playagain").style.display = "none";
+    comp = compChoice(choices);
     enableImages();
-    play();
+    
 })
 
 function rockClickHandler() {

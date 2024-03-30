@@ -5,6 +5,9 @@ body{
     align-items: center;
     height: 100vh;
 }
+h2{
+    margin-bottom: 0px;
+}
 
 .icon-cont{
    
@@ -14,6 +17,16 @@ body{
 .icon-cont img{
     margin: 30px;
 }
+.buttonCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button{
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+
 }
